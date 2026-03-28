@@ -1,0 +1,27 @@
+# Terraform state files — never commit these
+*.tfstate
+*.tfstate.backup
+*.tfstate.lock.info
+.terraform/
+.terraform.lock.hcl
+
+# Sensitive variable files
+*.tfvars.json
+secrets.tfvars
+**/secrets.auto.tfvars
+
+# Override files
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Crash logs
+crash.log
+crash.*.log
+
+# Editor
+.idea/
+.vscode/
+*.swp
+*.swo
