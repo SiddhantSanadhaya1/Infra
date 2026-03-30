@@ -26,9 +26,11 @@ provider "aws" {
 
   default_tags {
     tags = {
-      Project     = var.project_name
+      Application = "InsureCo Insurance Portal"
       Environment = var.environment
+      Owner       = "InsureCo-Engineering"
       ManagedBy   = "Terraform"
+      Project     = var.project_name
     }
   }
 }

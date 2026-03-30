@@ -1,17 +1,17 @@
 variable "aws_region" {
-  description = "AWS region to deploy resources"
+  description = "AWS region to deploy InsureCo Insurance resources"
   type        = string
   default     = "us-east-1"
 }
 
 variable "project_name" {
-  description = "Name prefix for all resources"
+  description = "Name prefix for all InsureCo Insurance resources"
   type        = string
-  default     = "infra-app"
+  default     = "insureco"
 }
 
 variable "environment" {
-  description = "Deployment environment (dev / staging / prod)"
+  description = "InsureCo Insurance deployment environment (dev / staging / prod)"
   type        = string
   default     = "dev"
 
@@ -76,9 +76,9 @@ variable "db_instance_class" {
 }
 
 variable "db_name" {
-  description = "Name of the application database"
+  description = "Name of the InsureCo Insurance application database"
   type        = string
-  default     = "appdb"
+  default     = "insureco"
 }
 
 variable "db_username" {
@@ -88,7 +88,7 @@ variable "db_username" {
 }
 
 variable "alert_email" {
-  description = "Email address for CloudWatch alarm notifications"
+  description = "Email address for InsureCo Engineering CloudWatch alarm notifications"
   type        = string
-  default     = "ops@example.com"
+  default     = "ops-alerts@insureco.example.com"
 }

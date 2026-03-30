@@ -1,6 +1,7 @@
+# InsureCo Insurance Portal — Development Environment
 environment          = "dev"
 aws_region           = "us-east-1"
-project_name         = "infra-app"
+project_name         = "insureco"
 
 vpc_cidr             = "10.0.0.0/16"
 availability_zones   = ["us-east-1a", "us-east-1b", "us-east-1c"]
@@ -13,4 +14,4 @@ asg_max_size         = 4
 asg_desired_capacity = 2
 
 db_instance_class    = "db.t3.medium"
-db_name              = "appdb"
+db_name              = "insureco"

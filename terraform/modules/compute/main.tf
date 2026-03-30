@@ -1,7 +1,7 @@
 # ─── ECR Repository ───────────────────────────────────────────────────────────
 
 resource "aws_ecr_repository" "app" {
-  name                 = "${var.project_name}-${var.environment}"
+  name                 = "insureco-app-${var.environment}"
   image_tag_mutability = "MUTABLE"
 
   image_scanning_configuration {
@@ -262,6 +262,7 @@ resource "aws_cloudwatch_dashboard" "main" {
 
 resource "aws_lambda_function" "worker" {
   function_name = "${var.project_name}-${var.environment}-worker"
+  description   = "InsureCo Insurance Claims Processing Worker"
   role          = aws_iam_role.lambda.arn
   package_type  = "Image"
   image_uri     = "${aws_ecr_repository.app.repository_url}:worker-latest"
